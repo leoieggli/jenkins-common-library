@@ -1,7 +1,7 @@
 def call(Map options = [:]) {
     def label = "slave-${UUID.randomUUID().toString()}"
 
-podTemplate(label: label, yaml: """
+podTemplate(label: label, cloud: 'paas', yaml: """
 apiVersion: v1
 kind: Pod
 metadata:
